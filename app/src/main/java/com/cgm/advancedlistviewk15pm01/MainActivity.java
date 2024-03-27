@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         ListView countryListView = findViewById(R.id.listViewId);
 
-        ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(this,
-                android.R.layout.simple_list_item_1, countryList);
+        //ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(this,
+           //     android.R.layout.simple_list_item_1, countryList);
+        CustomListAdapter adapter = new CustomListAdapter(this, countryList);
 
         countryListView.setAdapter(adapter);
     }
